@@ -487,11 +487,10 @@ int main(int argc, char *const argv[])
         mf_anticollision(t, r);
 
         // Display the nonce and the last 4 bit of the parity
-        fprintf(stdout, "Nonce: %08x, Parity: ", nonce);
+        fprintf(stdout, "Sector: %d, type %c, nonce encoded: %08x, parity error: ", j, (dumpKeysA ? 'A' : 'B'), nonce);
         for (int iParity = 0; iParity < 4; iParity++) {
           fprintf(stdout, "%d", ((nonceParityError >> (3 - iParity)) & 0x01));
         }
-        
         
         fprintf(stdout, "\n");
       }
