@@ -20,3 +20,8 @@ Lauching mfack, you will need to pass options, see
 ```
 mfack -h
 ```
+
+# Usage of results
+The nonce encoded and their parity error (same output as proxmark, the parity bits sent by the tag xor the parity of the nonce returned) can be used to execute a staticnested_0nt attack and recover the keys. The staticnested_0nt tool is provided in the subfolder with the same name, see details inside for compilation.
+
+It is recommended to run the last step of the attack on a machine with a good CPU as it will be faster.
